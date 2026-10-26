@@ -410,12 +410,12 @@
       <section class="ecosystem" id="ecossistema">
         <div class="wrap">
           <h2>Um ecossistema, não três produtos soltos</h2>
-          <p class="eco-lede">Toque em cada produto para ver o papel dele. O MP Gestor fica no centro: é ele que alimenta, atualiza e protege os dois aplicativos.</p>
+          <p class="eco-lede">Toque em cada produto para ver o papel dele. O MP Aplicativos fica no centro: é ele que alimenta, atualiza e protege os dois aplicativos.</p>
 
           <div class="eco-flow">
             <div class="eco-apps">
-              <button type="button" class="eco-card sel-teal" data-eco="gestor" aria-pressed="true">
-                <h3><span class="c-teal">●</span> MP Gestor</h3>
+              <button type="button" class="eco-card sel-teal" data-eco="aplicativos" aria-pressed="true">
+                <h3><span class="c-teal">●</span> MP Aplicativos</h3>
                 <p>O painel — gerenciar tudo</p>
               </button>
             </div>
@@ -433,15 +433,15 @@
           </div>
 
           <div class="eco-detail" id="eco-detail" aria-live="polite">
-            <h3 id="eco-detail-title">MP Gestor — o centro de comando</h3>
-            <p id="eco-detail-text">Clientes, revendedores e créditos, financeiro, servidores e versões dos apps: tudo passa por ele. É o Gestor que ativa o acesso, publica atualizações, vigia os servidores e avisa você — e o cliente — quando algo acontece.</p>
+            <h3 id="eco-detail-title">MP Aplicativos — o centro de comando</h3>
+            <p id="eco-detail-text">Clientes, revendedores e créditos, financeiro, servidores e versões dos apps: tudo passa por ele. É ele que ativa o acesso, publica atualizações, vigia os servidores e avisa você — e o cliente — quando algo acontece.</p>
           </div>
 
           <div class="eco-steps">
             <div class="eco-step">
               <span class="n">PASSO 1</span>
               <h3>O revendedor ativa</h3>
-              <p>No MP Gestor, o revendedor cadastra o cliente e gasta 1 crédito. A ativação vale para o servidor onde o cliente está — Infinity, Sigma ou outro.</p>
+              <p>No MP Aplicativos, o revendedor cadastra o cliente e gasta 1 crédito. A ativação vale para o servidor onde o cliente está — Infinity, Sigma ou outro.</p>
             </div>
             <div class="eco-step">
               <span class="n">PASSO 2</span>
@@ -499,15 +499,15 @@
         var details = {
           player: {
             title: "MP Player — a ponta que o cliente vê",
-            text: "É onde o cliente assiste. Ele não configura nada: a lista, o vencimento e as atualizações chegam prontos do MP Gestor, e o desempenho do aparelho volta para o painel a cada sessão."
+            text: "É onde o cliente assiste. Ele não configura nada: a lista, o vencimento e as atualizações chegam prontos do MP Aplicativos, e o desempenho do aparelho volta para o painel a cada sessão."
           },
           zuna: {
             title: "VUNA Play — a mesma força, outra vitrine",
-            text: "A segunda marca roda sobre a base do MP Player, mas com identidade e aplicativo próprios. No MP Gestor, ela tem canal de atualização separado: cliente VUNA nunca recebe arquivo do MP Player, e vice-versa."
+            text: "A segunda marca roda sobre a base do MP Player, mas com identidade e aplicativo próprios. No MP Aplicativos, ela tem canal de atualização separado: cliente VUNA nunca recebe arquivo do MP Player, e vice-versa."
           },
-          gestor: {
-            title: "MP Gestor — o centro de comando",
-            text: "Clientes, revendedores e créditos, financeiro, servidores e versões dos apps: tudo passa por ele. É o Gestor que ativa o acesso, publica atualizações, vigia os servidores e avisa você — e o cliente — quando algo acontece."
+          aplicativos: {
+            title: "MP Aplicativos — o centro de comando",
+            text: "Clientes, revendedores e créditos, financeiro, servidores e versões dos apps: tudo passa por ele. É ele que ativa o acesso, publica atualizações, vigia os servidores e avisa você — e o cliente — quando algo acontece."
           }
         };
         var cards = document.querySelectorAll(".eco-card");
@@ -520,7 +520,7 @@
               c.setAttribute("aria-pressed", "false");
             });
             var key = card.getAttribute("data-eco");
-            var sel = key === "player" ? "sel-amber" : key === "gestor" ? "sel-teal" : "sel-coral";
+            var sel = key === "player" ? "sel-amber" : key === "aplicativos" ? "sel-teal" : "sel-coral";
             card.classList.add(sel);
             card.setAttribute("aria-pressed", "true");
             title.textContent = details[key].title;
